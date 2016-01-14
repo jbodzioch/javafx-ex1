@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?scenebuilder-preview-i18n-resource ../base/base.properties?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="232.0" prefWidth="526.0" xmlns="http://javafx.com/javafx/8.0.51" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.capgemini.javafx_starterkit.controller.BookAddController">
+  <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefWidth="474.0" styleClass="formTitle" text="%label.addTitle" textAlignment="CENTER">
+    <font>
+      <Font size="36.0" />
+    </font>
+  </Label>
+  <Button fx:id="addButton" defaultButton="true" layoutX="384.0" layoutY="177.0" mnemonicParsing="false" onAction="#addButtonAction" text="%button.add" />
+  <TextField fx:id="titleField" layoutX="250.0" layoutY="67.0" />
+  <TextField fx:id="authorsField" layoutX="250.0" layoutY="110.0" />
+  <Label fx:id="titleLabel" layoutX="51.0" layoutY="72.0" text="%label.title" />
+  <Label fx:id="authorsLabel" layoutX="51.0" layoutY="115.0" text="%label.authors" />
+</AnchorPane>
