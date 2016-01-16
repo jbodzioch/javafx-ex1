@@ -15,9 +15,15 @@ public class BookAdd {
 
 	private final StringProperty title = new SimpleStringProperty();
 	private final StringProperty authors = new SimpleStringProperty();
+	/*
+	 * REV: po co tu wynik?
+	 */
 	private final ListProperty<BookTo> result = new SimpleListProperty<>(
 			FXCollections.observableList(new ArrayList<>()));
 
+	/*
+	 * REV: brak method wymaganych w JavaFX beanie
+	 */
 	public String getTitle() {
 		return title.get();
 	}

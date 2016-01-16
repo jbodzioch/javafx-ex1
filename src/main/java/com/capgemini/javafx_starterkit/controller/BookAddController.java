@@ -61,6 +61,9 @@ public class BookAddController {
 			protected Collection<BookTo> call() throws Exception {
 
 				restClient.add(model.getTitle(), model.getAuthors());
+				/*
+				 * REV: wyszukujesz po tytule dodanej ksiazki, a nie tytule wpisanym w oknie wyszukiwania
+				 */
 				Collection<BookTo> result = restClient.search(model.getTitle());
 				return result;
 			}
@@ -84,7 +87,9 @@ public class BookAddController {
 	}
 
 	public void showAcceptInformation() {
-
+		/*
+		 * REV: teksty powinny byc pobrane z bundle
+		 */
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);
 		alert.setTitle("Information");
 		alert.setContentText("Book was properly added to database");

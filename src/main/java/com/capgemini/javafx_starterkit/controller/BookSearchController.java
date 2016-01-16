@@ -92,6 +92,9 @@ public class BookSearchController {
 					resources);
 			Scene scene = new Scene(root, 500, 250);
 			Stage stageAddBook = new Stage();
+			/*
+			 * REV: tekst powinien byc pobrany z bundla
+			 */
 			stageAddBook.setTitle("Add book");
 			stageAddBook.initModality(Modality.APPLICATION_MODAL);
 			stageAddBook.initOwner(addButton.getScene().getWindow());
@@ -101,11 +104,17 @@ public class BookSearchController {
 
 			stageAddBook.setOnHiding(new EventHandler<WindowEvent>() {
 				public void handle(WindowEvent we) {
+					/*
+					 * REV: wyszukiwanie nie jest konieczne przy zamykaniu okna bez dodania ksiazki
+					 */
 					searchBook();
 				}
 			});
 
 		} catch (IOException e) {
+			/*
+			 * REV: obsluga wyjatkow
+			 */
 			e.printStackTrace();
 		}
 	}

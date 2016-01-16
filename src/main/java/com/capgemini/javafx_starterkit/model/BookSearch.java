@@ -14,10 +14,16 @@ import javafx.collections.FXCollections;
 public class BookSearch {
 
 	private final StringProperty title = new SimpleStringProperty();
+	/*
+	 * REV: po co tu autorzy?
+	 */
 	private final StringProperty authors = new SimpleStringProperty();
 	private final ListProperty<BookTo> result = new SimpleListProperty<>(
 			FXCollections.observableList(new ArrayList<>()));
 
+	/*
+	 * REV: brak method wymaganych w JavaFX beanie
+	 */
 	public String getTitle() {
 		return title.get();
 	}
